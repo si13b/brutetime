@@ -58,11 +58,13 @@ Results in:
 * Key size: 20bits
 ```
 
+Keep the Encrypted Text (ciphertext) safe for later decryption. KeePass or LastPass is good for this.
+
 You may want to clear your terminal history at this point to avoid secret retrieval via reverse lookup etc.
 
 ### Decrypting (brute forcing) a value
 
-Using the cypher from the previous example:
+Using the ciphertext from the previous example:
 
 ```
 node brutetime.js decrypt 3b50e6340e5477a5ba8ff4456d53a456 --size 24
