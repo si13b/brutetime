@@ -45,17 +45,13 @@ const main = () => {
 		throw Error(`
 			Usage: brutetime [options] encrypt|decrypt
 			
-			\t--size - Size in bits of the random key (roughly; 24bit <10m, 26bit <1d, 32bit <1w)
-			\t--file - File name to write to (default; console)			
-			
+			\t--size - Size in bits of the random key (roughly; 24bit <15m, 26bit <1h, 30bit <6h, 32bit <1w)			
 		`)
 	}
 };
 
 const encrypt = (text, keySize = KEY_MAX) => {
 	let key = '' + Math.floor(Math.random() * Math.pow(2, keySize));
-
-	console.log(key);
 
 	let cipher = crypto.createCipher('aes-256-cbc', key);
 	let crypted = cipher.update(KEY_MARKER + text, 'utf-8', 'hex');

@@ -2,12 +2,12 @@
   "name": "brutetime",
   "version": "1.0.0",
   "description": "Randomly encrypt a secret, with the intention of unlocking it after a period of time.",
-  "main": "safe.js",
+  "main": "brutetime.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "minimist": "^1.2.0"
   }
